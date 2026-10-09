@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0B1020;
+    color: #F5F7FF;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.cabecalho {
+    background-color: #151B33;
+    padding: 20px;
+    text-align: center;
+}
+
+.cabecalho a {
+    color: #B8C7FF;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.titulo {
+    font-size: 40px;
+    color: #8B7CFF;
+}
+
+.conteudo {
+    text-align: center;
+    padding: 30px 20px;
+    flex: 1;
+    width: 100%;
+}
+
+.subtitulo {
+    margin-top: 50px;
+    margin-bottom: 70px;
+    font-size: 25px;
+    color: #DDE3FF;
+}
+
+.tema_memes,
+.tema_retros,
+.tema_animais {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    max-width: 100%;
+    min-height: 65px;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 30px;
+    background-color: #1B2545;
+    color: #F5F7FF;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.2s;
+}
+
+.tema_memes:hover,
+.tema_retros:hover,
+.tema_animais:hover {
+    background-color: #5146C7;
+    transform: scale(1.05);
+}
+
+.destaque {
+    width: 100%;
+    max-width: 700px;
+    height: 400px;
+    margin: 0 auto 30px;
+    background-color: #151B33;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#imagem {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.Sons {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 200px));
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+}
+
+.tecla {
+    width: 100%;
+    min-height: 70px;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #1B2545;
+    color: #F5F7FF;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.2s;
+    overflow-wrap: break-word;
+}
+
+.tecla:hover {
+    background-color: #5146C7;
+    transform: scale(1.03);
+}
+
+.tecla:active {
+    transform: scale(0.95);
+}
+
+.rodape {
+    padding: 20px;
+    text-align: center;
+    background-color: #151B33;
+    color: #8F9BC4;
+}
+
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 32px;
+    }
+
+    .conteudo {
+        padding: 25px 15px;
+    }
+
+    .subtitulo {
+        margin-top: 35px;
+        margin-bottom: 40px;
+        font-size: 22px;
+    }
+
+    .destaque {
+        height: 320px;
+    }
+
+    .Sons {
+        grid-template-columns: repeat(2, minmax(0, 200px));
+        gap: 12px;
+    }
+
+    .tecla {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cabecalho {
+        padding: 16px;
+    }
+
+    .titulo {
+        font-size: 28px;
+    }
+
+    .conteudo {
+        padding: 20px 12px;
+    }
+
+    .subtitulo {
+        margin-top: 25px;
+        margin-bottom: 30px;
+        font-size: 20px;
+    }
+
+    .tema_memes,
+    .tema_retros,
+    .tema_animais {
+        display: flex;
+        width: 100%;
+        max-width: 300px;
+        margin: 10px auto;
+        font-size: 18px;
+    }
+
+    .destaque {
+        height: 240px;
+        margin-bottom: 20px;
+    }
+
+    .Sons {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .tecla {
+        min-height: 65px;
+        padding: 12px 6px;
+        font-size: 14px;
+    }
+
+    .rodape {
+        padding: 16px 10px;
+        font-size: 13px;
+    }
+}
